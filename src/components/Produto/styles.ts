@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
-import { cores } from '../../styles'
+import { cores, fontes } from '../../styles'
 
 export const Produto = styled.div``
 
 export const Titulo = styled.h3`
-  min-height: 64px;
+  font-family: ${fontes.titulo};
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  min-height: 56px;
 `
 
 export const Capa = styled.div`
@@ -15,12 +20,13 @@ export const Capa = styled.div`
     display: block;
     width: 100%;
     margin-bottom: 8px;
+    border-radius: 10px;
+    border: 3px solid ${cores.corPrincipal};
   }
 `
 
 export const Prices = styled.div`
   margin: 16px 0;
-  color: #fff;
 
   small {
     font-size: 16px;
@@ -30,7 +36,8 @@ export const Prices = styled.div`
   }
 
   strong {
-    font-size: 18px;
+    font-size: 20px;
+    color: ${cores.corSecundaria};
   }
 `
 
@@ -63,26 +70,21 @@ export const Plataformas = styled.ul`
 export const BtnComprar = styled.button`
   display: block;
   width: 100%;
-  background-image: linear-gradient(
-    45deg,
-    ${cores.corPrincipal},
-    ${cores.corSecundaria}
-  );
+  background-color: ${cores.corPrincipal};
+  transition: background-color 0.2s, color 0.2s;
   font-weight: bold;
   font-size: 16px;
   padding: 12px 0;
   text-transform: capitalize;
-  color: #eee;
+  font-family: ${fontes.texto};
+  color: ${cores.corTexto};
   border: none;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-bottom: 8px;
 
   &:hover {
-    background-image: linear-gradient(
-      -45deg,
-      ${cores.corPrincipal},
-      ${cores.corSecundaria}
-    );
+    background-color: ${cores.corSecundaria};
+    color: #fff;
   }
 `

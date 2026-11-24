@@ -1,10 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  corTexto: '#121714',
-  corFundo: '#eee',
-  corPrincipal: '#0c2461',
-  corSecundaria: '#4a69bd'
+  corTexto: '#141a0f',
+  corFundo: '#f7fbef',
+  corPrincipal: '#84cc16',
+  corSecundaria: '#f97316'
+}
+
+export const fontes = {
+  titulo: "'Bebas Neue', sans-serif",
+  texto: 'Barlow, sans-serif'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -13,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: ${fontes.texto};
     color: ${cores.corTexto}
   }
 

@@ -1,23 +1,22 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { cores, fontes } from '../../styles'
 
 export const Header = styled.header`
-  background-image: linear-gradient(
-    45deg,
-    ${cores.corPrincipal},
-    ${cores.corSecundaria}
-  );
+  background-color: ${cores.corPrincipal};
+  border-bottom: 6px solid ${cores.corSecundaria};
   margin: 80px 0;
   padding: 16px 24px;
   display: flex;
-  border-radius: 6px;
+  border-radius: 12px;
   align-items: center;
 
   h1 {
-    font-size: 18px;
+    font-family: ${fontes.titulo};
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 1px;
     flex: 1;
-    font-style: italic;
-    color: ${cores.corFundo};
+    color: ${cores.corTexto};
   }
 
   div {
@@ -31,7 +30,8 @@ export const Header = styled.header`
     }
 
     span {
-      color: ${cores.corFundo};
+      font-weight: 600;
+      color: ${cores.corTexto};
     }
   }
 
